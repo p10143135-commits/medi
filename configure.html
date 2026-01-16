@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi Mitra+ | Configure Medicine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="configure-header">
+        <div class="header-left">
+            <div class="logo-container">
+                <i class="fas fa-heartbeat logo-icon"></i>
+                <h1 class="logo-text">Medi <span class="logo-highlight">Mitra+</span></h1>
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <h2 class="page-title">Configure the Medicine</h2>
+        </div>
+        
+        <div class="header-right">
+            <div class="connection-status">
+                <i class="fas fa-wifi connected"></i>
+                <span>Connected</span>
+            </div>
+            
+            <button class="header-btn back-btn" id="backBtn">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="configure-container">
+        <!-- Medicine Details Section -->
+        <section class="configure-section">
+            <h3 class="section-subtitle">
+                <i class="fas fa-pills"></i> Medicine Details
+            </h3>
+            
+            <div class="medicine-details">
+                <div class="input-group">
+                    <label for="medicineName">
+                        <i class="fas fa-capsules"></i> Name of Medicine
+                    </label>
+                    <input type="text" id="medicineName" placeholder="e.g., Paracetamol, Vitamin D, etc.">
+                    <div class="input-hint">Enter the complete medicine name as prescribed</div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="medicineDosage">
+                        <i class="fas fa-balance-scale"></i> Dosage per intake
+                    </label>
+                    <select id="medicineDosage">
+                        <option value="1">1 capsule/tablet</option>
+                        <option value="2">2 capsules/tablets</option>
+                        <option value="0.5">Half capsule/tablet</option>
+                        <option value="custom">Custom dosage</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="totalCapsules">
+                        <i class="fas fa-box"></i> Total capsules/tablets
+                    </label>
+                    <input type="number" id="totalCapsules" min="1" value="10">
+                    <div class="input-hint">Total available capsules/tablets in current stock</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Schedule Selection Section -->
+        <section class="configure-section">
+            <h3 class="section-subtitle">
+                <i class="fas fa-calendar-alt"></i> Schedule Selection
+            </h3>
+            
+            <div class="schedule-section">
+                <p class="schedule-label">Select days of the week:</p>
+                <div class="days-selector" id="daysSelector">
+                    <!-- Days will be dynamically added here -->
+                </div>
+                
+                <div class="schedule-options">
+                    <div class="option-card">
+                        <input type="checkbox" id="everydayOption" class="option-checkbox">
+                        <label for="everydayOption" class="option-label">
+                            <i class="fas fa-calendar-day"></i>
+                            <span>Every Day</span>
+                        </label>
+                    </div>
+                    
+                    <div class="option-card">
+                        <input type="checkbox" id="weekdaysOption" class="option-checkbox">
+                        <label for="weekdaysOption" class="option-label">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Weekdays Only</span>
+                        </label>
+                    </div>
+                    
+                    <div class="option-card">
+                        <input type="checkbox" id="weekendsOption" class="option-checkbox">
+                        <label for="weekendsOption" class="option-label">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <span>Weekends Only</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Timing/Intake Section -->
+        <section class="configure-section">
+            <h3 class="section-subtitle">
+                <i class="fas fa-clock"></i> Timing / Intake Schedule
+            </h3>
+            
+            <div class="timing-section">
+                <p class="schedule-label">Select when to take the medicine:</p>
+                <div class="timing-options" id="timingOptions">
+                    <!-- Timing options will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Action Buttons -->
+        <div class="configure-actions">
+            <button class="action-btn cancel-btn" id="cancelBtn">
+                <i class="fas fa-times"></i> Cancel
+            </button>
+            
+            <button class="action-btn save-btn" id="saveBtn">
+                <i class="fas fa-save"></i> Save Medicine
+            </button>
+            
+            <button class="action-btn add-another-btn" id="addAnotherBtn">
+                <i class="fas fa-plus-circle"></i> Add Another
+            </button>
+        </div>
+    </main>
+    
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Medicine Added Successfully!</h2>
+            <p>Your medicine has been configured and added to your schedule.</p>
+            <div class="success-actions">
+                <button class="modal-btn" id="goToDashboardBtn">Go to Dashboard</button>
+                <button class="modal-btn outline-btn" id="addMoreBtn">Add Another Medicine</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

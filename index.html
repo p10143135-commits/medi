@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi Mitra+ | Patient Portal Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-container">
+                    <i class="fas fa-heartbeat logo-icon"></i>
+                    <h1 class="logo-text">Medi <span class="logo-highlight">Mitra+</span></h1>
+                </div>
+                <p class="login-subtitle">Patient Portal Login</p>
+            </div>
+            
+            <div class="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="username" placeholder="Username" value="demo_patient">
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="password" placeholder="Password" value="demo123">
+                </div>
+                
+                <div class="demo-credentials">
+                    <h4><i class="fas fa-info-circle"></i> Demo Credentials</h4>
+                    <p><strong>Username:</strong> demo_patient</p>
+                    <p><strong>Password:</strong> demo123</p>
+                </div>
+                
+                <button id="loginBtn" class="login-btn">
+                    <span class="btn-text">Login to Portal</span>
+                    <i class="fas fa-arrow-right btn-icon"></i>
+                </button>
+                
+                <div class="login-footer">
+                    <p>Need help? <a href="#" class="help-link">Contact Customer Care</a></p>
+                </div>
+            </div>
+            
+            <div class="login-animation">
+                <div class="pulse-circle pulse-1"></div>
+                <div class="pulse-circle pulse-2"></div>
+                <div class="pulse-circle pulse-3"></div>
+            </div>
+        </div>
+        
+        <div class="welcome-message">
+            <h2>Welcome to Medi Mitra+</h2>
+            <p>Your trusted companion for medicine management and health tracking</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

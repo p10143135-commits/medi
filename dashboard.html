@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi Mitra+ | Patient Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo-container">
+                <i class="fas fa-heartbeat logo-icon"></i>
+                <h1 class="logo-text">Medi <span class="logo-highlight">Mitra+</span></h1>
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <div class="welcome-user">
+                <h2>Welcome, <span id="patientName">Alex Johnson</span></h2>
+                <p id="currentDate" class="current-date">Loading date...</p>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <button class="header-btn add-med-btn" id="addMedBtn">
+                <i class="fas fa-plus"></i> Add Medicine
+            </button>
+            
+            <div class="connection-status">
+                <i class="fas fa-wifi connected"></i>
+                <span>Connected</span>
+            </div>
+            
+            <button class="header-btn help-btn" id="helpBtn">
+                <i class="fas fa-question-circle"></i> Help
+            </button>
+            
+            <button class="header-btn logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-container">
+        <div class="dashboard-welcome">
+            <div class="welcome-card">
+                <h2><i class="fas fa-bell"></i> Today's Medicine Schedule</h2>
+                <p>You have <span class="highlight-count" id="todayCount">3</span> medicines scheduled for today</p>
+            </div>
+        </div>
+        
+        <!-- Action Buttons Section -->
+        <section class="action-section">
+            <h2 class="section-title">Quick Actions</h2>
+            <div class="action-buttons">
+                <div class="action-card" id="addBtn">
+                    <div class="action-icon add-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3>Add New</h3>
+                    <p>Add prescriptions, schedule timings, etc.</p>
+                    <div class="action-pulse"></div>
+                </div>
+                
+                <div class="action-card" id="submitBtn">
+                    <div class="action-icon submit-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Submit Data</h3>
+                    <p>Submit data after verification</p>
+                    <div class="action-pulse"></div>
+                </div>
+                
+                <div class="action-card" id="modifyBtn">
+                    <div class="action-icon modify-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Modify</h3>
+                    <p>Edit or update existing records</p>
+                    <div class="action-pulse"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Medicines List Section -->
+        <section class="medicines-section">
+            <div class="section-header">
+                <h2 class="section-title">Your Medicines <span class="med-count" id="medCount">(3)</span></h2>
+                <button class="view-all-btn" id="viewAllBtn">View All</button>
+            </div>
+            
+            <div class="medicines-container" id="medicinesContainer">
+                <!-- Medicine cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <div class="company-logo">
+                <i class="fas fa-hospital-alt"></i>
+                <span>Medi Solutions Inc.</span>
+            </div>
+            <div class="footer-info">
+                <div class="date-time" id="currentDateTime">
+                    Loading date and time...
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#" id="footerHelpBtn">Help Center</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Help Modal -->
+    <div class="modal-overlay" id="helpModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-headset"></i> Customer Care Help</h2>
+                <button class="close-modal" id="closeHelpModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="help-contact">
+                    <p><i class="fas fa-phone"></i> <strong>Helpline:</strong> 1-800-MED-HELP</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> support@medimitraplus.com</p>
+                    <p><i class="fas fa-clock"></i> <strong>Hours:</strong> 24/7 Available</p>
+                </div>
+                <div class="help-message">
+                    <h3>How can we help you today?</h3>
+                    <textarea placeholder="Describe your issue or question..." rows="4"></textarea>
+                    <button class="send-help-btn">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
